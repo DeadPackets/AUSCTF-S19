@@ -1,0 +1,15 @@
+1. Why do you kill people?
+
+Well, because I can - and because it is fun.
+
+2. What methods of payment do you accept?
+
+BTC, XMR, VBUCKS and hugs.
+
+3. What weapon do you use?
+
+Well mostly I just shoot them square in the head - that seems to do it.
+
+4. Have you considered the fact that your website might be vulnerable to LFI?
+
+What in the hell is a LFI????

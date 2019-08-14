@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>WeakCode</title>
+</head>
+
+<body>
+  <form>
+    Username:<br>
+    <input type="text" id="username" name="user">
+    <br> Password:<br>
+    <input type="password" id="password" name="pass">
+  </form>
+  <button onclick=doLogin();>Login!</button>
+  <script>
+
+    //THIS IS ENCRYPTED ON PURPOSE - DONT TRY TO DECODE IT - CHALLANGE ISNT HERE
+    var _0x6e70=["\x46\x4C\x41\x47\x7B\x61\x6C\x77\x61\x79\x73\x2D\x72\x65\x61\x64\x2D\x74\x68\x65\x2D\x73\x6F\x75\x72\x63\x65\x7D","\x43\x6F\x72\x72\x65\x63\x74\x21\x20\x43\x68\x65\x63\x6B\x20\x79\x6F\x75\x72\x20\x63\x6F\x6E\x73\x6F\x6C\x65\x2E","\x6C\x6F\x67"];var flag=_0x6e70[0];function printFlag(){alert(_0x6e70[1]);console[_0x6e70[2]](flag)}
+
+    //CHALLANGE IS ACTUALLY HERE
+    function doLogin() {
+      var user = document.getElementById('username').value;
+      var pass = document.getElementById('password').value;
+      if (user == 'admin' && pass == 'leg1tp4ss') {
+        printFlag()
+      } else {
+        alert('Incorrect credentials!')
+      }
+    }
+  </script>
+</body>
+
+</html>

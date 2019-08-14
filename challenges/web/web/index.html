@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>DeadCTF - Welcome!</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Work+Sans:extra-light,light" rel="stylesheet">
+</head>
+
+<body>
+  <style>
+    body {
+      font-family: 'Work Sans', sans-serif;
+    }
+
+    .light {
+      font-weight: 200;
+    }
+
+    .text {
+      font-weight: 500;
+    }
+  </style>
+  <div id="body">
+    <h1 class="light">DeadCTF - Welcome!</h1>
+	<p class="text">Welcome to the fist ever CTF made by me, DeadPackets! If you need any help, help yourself.</p>
+    <br />
+    <h2>Released challenges so far:</h2>
+    <div id="challenge">
+      <h3>Heads up!</h3>
+      <p>
+        Link: <a class="chllng-link" href="#">N/A</a>
+      </p>
+      <p class="description">
+        Some people say that sometimes you really can find some secret information in a server's headers....hmmm...
+      </p>
+    </div>
+    <hr />
+    <div id="challenge">
+      <h3>A jumbled mess!</h3>
+      <p>
+        Link: <a class="chllng-link" href="/jumbled-mess">/jumbled-mess</a>
+      </p>
+      <p class="description">
+        This page seems to generate random garbage everytime....but it cant be just garbage, right?
+      </p>
+    </div>
+    <hr />
+
+    <div id="challenge">
+      <h3>Admin panelzzz</h3>
+      <p>
+        Link: <a class="chllng-link" href="/admin-panel">/admin-panel</a>
+      </p>
+      <p class="description">
+        There has to be a way to login into this admin page without creds, there just has to.
+      </p>
+    </div>
+    <hr />
+    <div id="challenge">
+      <h3>Account Info</h3>
+      <p>
+        Link: <a class="chllng-link" href="/accountinfo">/accountinfo</a>
+      </p>
+      <p class="description">
+        This page seems to allow you to see the account information of a user if you have their ID. I wonder if we can get the info of the admin user?
+      </p>
+    </div>
+    <hr />
+    <div id="challenge">
+      <h3>Whats this? "View flags??"</h3>
+      <p>
+        Link: <a class="chllng-link" href="/view-flags">/view-flags</a>
+      </p>
+      <p class="description">
+        Seems like you could just view the flag....but you have to be an admin.
+      </p>
+    </div>
+    <hr />
+    <div id="challenge">
+      <h3>Cute kittens!"</h3>
+      <p>
+        Link: <a class="chllng-link" href="/cute-cat-picture">/cute-cat-picture</a>
+      </p>
+      <p class="description">
+        Look! Its an innocent picture of a cute cat! Or is it?...Intel tells us a secret message is in the image somewhere.
+      </p>
+    </div>
+    <hr />
+    <div id="challenge">
+      <h3>Cute kittens....again?</h3>
+      <p>
+        Link: <a class="chllng-link" href="/another-cute-cat-picture">/another-cute-cat-picture</a>
+      </p>
+      <p class="description">
+        Look! Its another "innocent" picture of a cat - wait...its not loading! Why is the image broken?! WHERE IS MY CUTE CAT PICTURE?!?! (The flag is in the image.)
+      </p>
+    </div>
+    <hr />
+    <div id="challenge">
+      <h3>Its a timebomb!</h3>
+      <p>
+        Link: <a class="chllng-link" href="/timebomb">/timebomb</a>
+      </p>
+      <p class="description">
+        We need to defuse this timebomb! But the problem is, the secret code is split into 5 pieces across 5 different URLS! And the pieces change every 10 seconds! You need to write a script that will get all 5 pieces of the code, piece them together, and submit
+        them to /timebomb/submit via POST request! (The final code should be sent in the "key" part of your POST request data. Dont send it in the URL, send it in the body.)
+      </p>
+    </div>
+    <hr />
+    <div id="challenge">
+      <h3>Using brute force</h3>
+      <p>
+        Link: <a class="chllng-link" href="/safe-login">/safe-login</a>
+      </p>
+      <p class="description">
+        We need to access this web interface that belongs to a safe. Thing is - we dont know the password! We know that the user is 'webadmin' but have no idea what the password is! Can you check it out? [Hint: Visit the URL, and hit cancel when it asks for a
+        password.]
+      </p>
+    </div>
+    <hr />
+    <div id="challenge">
+      <h3>Encoded</h3>
+      <p>
+        Link: <a class="chllng-link" href="#">N/A</a>
+      </p>
+      <p class="description">
+        There is a strange service running on this server on port 6969. Connect to it and deocode what it says! [Hint: I really do love the internet and its <b>net cats</b>]
+      </p>
+    </div>
+    <hr />
+    <div id="challenge">
+      <h3>Getting a file</h3>
+      <p>
+        Link: <a class="chllng-link" href="/get-file">/get-file</a>
+      </p>
+      <p class="description">
+        This seems to be a page where you can download any file you want...see if you can download a file called data.txt that is one directory up. [Hint: How 2 go 1 directory back in linux?]
+      </p>
+    </div>
+    <hr />
+    <div id="challenge">
+      <h3>Round and Round we go</h3>
+      <p>
+        Link: <a class="chllng-link" href="/redirect">/redirect</a>
+      </p>
+      <p class="description">
+        This link just seems to redirect me until the browser crashes...but im sure that it will lead somewhere eventually! Right? [Hint: Manually follow the redirects]
+      </p>
+    </div>
+    <hr />
+    <div id="challenge">
+      <h3>Picture Codes</h3>
+      <p>
+        Link: <a class="chllng-link" href="/picture-codes">/picture-codes</a>
+      </p>
+      <p class="description">
+        It just spits out a base64 link for an image....interesting. I wonder what it could be? [Hint: Google is your friend]
+      </p>
+    </div>
+    <hr />
+    <div id="challenge">
+      <h3>Stubborn Login</h3>
+      <p>
+        Link: <a class="chllng-link" href="/stubborn-login">/stubborn-login</a>
+      </p>
+      <p class="description">
+        God damnit! No matter what I do, this form wont give the flag! I know that the username is 'user' and the pass is '123' but it just doesnt give the flag! What could it be? [Hint: view-source:// ]
+      </p>
+    </div>
+    <hr />
+    <div id="challenge">
+      <h3>Old School</h3>
+      <p>
+        Link: <a class="chllng-link" href="/old-school">/old-school</a>
+      </p>
+      <p class="description">
+        This website was made long ago, and it only allows old browsers to access it! I wonder how we can trick the site into thinking that we are an old browser? [Hint: How do websites know what browser you are? (g o o g l e)]
+      </p>
+    </div>
+    <hr />
+    <div id="challenge">
+      <h3>Cryptic Messages</h3>
+      <p>
+        Link: <a class="chllng-link" href="/cryptic-messages">/cryptic-messages</a>
+      </p>
+      <p class="description">
+        The flag is RIGHT THERE! But it has been run through a cipher. Damnit.
+      </p>
+    </div>
+    <hr />
+    <div id="challenge">
+      <h3>Binary Transfer</h3>
+      <p>
+        Link: <a class="chllng-link" href="#">N/A</a>
+      </p>
+      <p class="description">
+        There seems to be another strange service running on port 4444. It just sends back weird jumbled characters....I wonder. [Hint: Try piping the output into a file.]
+      </p>
+    </div>
+    <hr />
+    <div id="challenge">
+      <h3>Anonymous FTP</h3>
+      <p>
+        Link: <a class="chllng-link" href="#">N/A</a>
+      </p>
+      <p class="description">
+        There seems to be an ftp server running on port 2121 of this machine...we have no credentials, but something tells me we can access it with a special username. Once you get in, the flag is in FLAG.txt [Hint: The title of this challenge.]
+      </p>
+    </div>
+    <hr />
+    <div id="challenge">
+      <h3>Lost Items</h3>
+      <p>
+        Link: <a class="chllng-link" href="/lost-items">/lost-items</a>
+      </p>
+      <p class="description">
+        This seems to contain an item we have lost..but we dont know which directory its in! Can you help? [Visit the link for more instructions]
+      </p>
+    </div>
+    <hr />
+    <div id="challenge">
+      <h3>Leaked Creds</h3>
+      <p>
+        Link: <a class="chllng-link" href="/login-page">/login-page</a>
+      </p>
+      <p class="description">
+        Here is another login page! Thankfully, the admin's credentials were leaked, but they are hashed. There has to be a way to crack these hashes without spending days.... [Hint: Very common hashes. Can be found in almost any online lookup table.]
+        <pre>User: 21232F297A57A5A743894A0E4A801FC3</pre>
+        <pre>Pass: 5F4DCC3B5AA765D61D8327DEB882CF99</pre>
+      </p>
+    </div>
+    <hr />
+    <div id="challenge">
+      <h3>Weak code</h3>
+      <p>
+        Link: <a class="chllng-link" href="/weak-code">/weak-code</a>
+      </p>
+      <p class="description">
+        This seems to be ANOTHER GOD DAMN LOGIN PAGE. But it was coded by a 12 year old MLG kid, so the code has to be weak. Can you see if you can get in?
+      </p>
+    </div>
+    <hr />
+    <div id="challenge">
+      <h3>1001 requests</h3>
+      <p>
+        Link: <a class="chllng-link" href="/1001-requests">/1001-requests</a>
+      </p>
+      <p class="description">
+        This page expects you to send it a get request 1001 times. There has to be another way, right? [Hint: Dont actually send 1001 requests please. It will work, but like. Gah, whatever. There is another way rather than spamming the server.]
+      </p>
+    </div>
+    <hr />
+    <div id="challenge">
+      <h3>Hidden Info</h3>
+      <p>
+        Link: <a class="chllng-link" href="/hidden-info">/hidden-info</a>
+      </p>
+      <p class="description">
+        Hey look probably another login pa- what? A 404 page? :thinking:
+      </p>
+    </div>
+    <hr />
+    <div id="challenge">
+      <h3>Did you notice this site has no icon?</h3>
+      <p>
+        Link: <a class="chllng-link" href="#">N/A</a>
+      </p>
+      <p class="description">
+        I wonder where is this site's icon?
+      </p>
+    </div>
+    <hr />
+    <div id="challenge">
+      <h3>FREE FLAGS!</h3>
+      <p>
+        Link: <a class="chllng-link" href="/getfreeflag">/getfreeflag</a>
+      </p>
+      <p class="description">
+        Just visit the link. My fingers are getting tired from typing.
+      </p>
+    </div>
+    <hr />
+    <div id="challenge">
+      <h3>Robots dot tee ex tee</h3>
+      <p>
+        Link: <a class="chllng-link" href="#">N/A</a>
+      </p>
+      <p class="description">
+        People say that there is a file that tells robots/bots where to go and not to go...I wonder if anything is in it? [NOTE: This is 2 challenges in one.]
+      </p>
+    </div>
+    <hr />
+    <div id="challenge">
+      <h3>Secret Origins</h3>
+      <p>
+        Link: <a class="chllng-link" href="/secret-origins">/secret-origins</a>
+      </p>
+      <p class="description">
+        This link only allows you through if you come from the CIA....how to fool it that we came from there? [Hint: How do websites know where you came from?] [Hint2: Just visit the link.]
+      </p>
+    </div>
+    <hr />
+    <div id="challenge">
+      <h3>Scanning for ports</h3>
+      <p>
+        Link: <a class="chllng-link" href="#">N/A</a>
+      </p>
+      <p class="description">
+        There is an open port on this machine somewhere between 61000 and 62000. Find it, and connect to it.
+      </p>
+    </div>
+    <hr />
+    <div id="challenge">
+      <h3>Injection</h3>
+      <p>
+        Link: <a class="chllng-link" href="http://evilcorp.tk:8080/mysql/get_int.php?id=1">here</a>
+      </p>
+      <p class="description">
+        This webserver seems to be running Mysql and PHP...see if you can get into the database and list the users, and get the admin password.
+      </p>
+    </div>
+    <hr />
+    <div id="challenge">
+      <h3>Shocking the shell</h3>
+      <p>
+        Link: <a class="chllng-link" href="http://evilcorp.tk:8000/">here</a>
+      </p>
+      <p class="description">
+      </p>
+    </div>
+    <hr />
+    <div id="challenge">
+      <h3>A bleeding heart</h3>
+      <p>
+        Link: <a class="chllng-link" href="https://evilcorp.tk:8443/">here</a>
+      </p>
+      <p class="description">
+        Visit the link for information.
+      </p>
+    </div>
+    <hr />
+    <div id="challenge">
+      <h3>Ultimate Challenge</h3>
+      <p>
+        Link: <a class="chllng-link" href="#">N/A</a>
+      </p>
+      <p class="description">
+        There is a service running on port 1337. Check it out.
+      </p>
+    </div>
+    <hr />
+    <div id="challenge">
+      <h3>Unknown File</h3>
+      <p>
+        Link: <a class="chllng-link" href="/unknownfile">/unknownfile</a>
+      </p>
+      <p class="description">
+        This file seems to contain important info except - it has no extension! I dont know what it is! Can you find out?
+      </p>
+    </div>
+    <hr />
+    <div id="challenge">
+      <h3>Crack me</h3>
+      <p>
+        Link: <a class="chllng-link" href="/crackme">/crackme</a>
+      </p>
+      <p class="description">
+        This zip file contains important info but - its protected with a password! Can you break it? [Hint: Use <a href="https://github.com/danielmiessler/SecLists/blob/master/Passwords/10_million_password_list_top_100.txt">this</a> password list]
+      </p>
+    </div>
+    <hr />
+  </div>
+</body>
+
+</html>

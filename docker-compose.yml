@@ -1,0 +1,170 @@
+version: '3.1'
+
+services:
+  web-challenges:
+    build: ./challenges/web
+    hostname: AUSWeb
+    dns: 1.1.1.1
+    environment:
+      - NODE_ENV=production
+    ports:
+      - "80:8080"
+    restart: always
+    logging:
+      options:
+          max-size: "2m"
+          max-file: "1"
+  socket-challenges:
+    build: ./challenges/socket
+    hostname: AUSSocket
+    dns: 1.1.1.1
+    environment:
+      - NODE_ENV=production
+    ports:
+      - "6969:6969"
+      - "4444:4444"
+      - "61337:61337"
+    restart: always
+    logging:
+      options:
+        max-size: "2m"
+        max-file: "1"
+  ftp-challenges:
+    build: ./challenges/ftp
+    hostname: AUSFTP
+    dns: 1.1.1.1
+    ports:
+      - "21:21"
+      - "30000-30010:30000-30010"
+    restart: always
+    logging:
+      options:
+        max-size: "2m"
+        max-file: "1"
+  shellshock-challenge:
+    build: ./challenges/shellshock/
+    hostname: AUSShellshock
+    privileged: true
+    ports:
+      - "80:80"
+    restart: always
+    logging:
+      options:
+        max-size: "2m"
+        max-file: "1"
+  the-butcher-base-socket:
+    build: ./challenges/the_butcher_base/socket
+    hostname: TheButcherBaseSocket
+    privileged: true
+    ports:
+      - "1337:1337"
+    restart: always
+    logging:
+      options:
+        max-size: "2m"
+        max-file: "1"
+    networks:
+      default:
+  the-butcher-base-web:
+    build: ./challenges/the_butcher_base/web
+    hostname: TheButcherBaseWeb
+    privileged: true
+    ports:
+      - "80:8000"
+    restart: always
+    logging:
+      options:
+        max-size: "2m"
+        max-file: "1"
+    networks:
+      default:
+  trinity-base-web:
+    build: ./challenges/trinity_base/web
+    hostname: TrinityBaseWeb
+    privileged: true
+    ports:
+      - "8008:8080"
+    restart: always
+    logging:
+      options:
+        max-size: "2m"
+        max-file: "1"
+  trinity-base-ftp:
+    build: ./challenges/trinity_base/ftp
+    hostname: TrinityBaseFTP
+    privileged: true
+    ports:
+      - "20:20"
+      - "21:21"
+      - "30000-30009:30000-30009"
+    restart: always
+    logging:
+      options:
+        max-size: "2m"
+        max-file: "1"
+  vladimir-base-ssh:
+    build: ./challenges/vladimir_base/ssh
+    hostname: VladimirBaseSSH
+    privileged: true
+    dns: 1.1.1.1
+    ports:
+      - "22:22"
+    restart: always
+    logging:
+      options:
+        max-size: "2m"
+        max-file: "1"
+  vladimir-base-irc:
+    build: ./challenges/vladimir_base/irc
+    hostname: VladimirBaseIRC
+    privileged: true
+    dns: 1.1.1.1
+    ports:
+      - "6667:6667"
+    restart: always
+    volumes:
+      - ./challenges/vladimir_base/irc/irc:/inspircd/conf
+    logging:
+      options:
+        max-size: "2m"
+        max-file: "1"
+  vladimir-base-web:
+    build: ./challenges/vladimir_base/web
+    hostname: VladimirBaseWeb
+    restart: always
+    depends_on:
+      - vladimir-base-db
+    environment:
+      - MYSQL_HOST=vladimir-base-db
+    ports:
+      - "80:8000"
+    logging:
+      options:
+        max-size: "2m"
+        max-file: "1"
+    networks:
+      default:
+      vladimir_bridge:
+  vladimir-base-db:
+    image: mysql:latest
+    restart: always
+    command: --default-authentication-plugin=mysql_native_password
+    volumes:
+      - ./challenges/vladimir_base/init.sql:/docker-entrypoint-initdb.d/init.sql
+    environment:
+      MYSQL_ROOT_PASSWORD: SUPER_SECURE_PASSWORD
+      MYSQL_USER: cr4ck3d
+      MYSQL_PASSWORD: cr4ck3d
+      MYSQL_DATABASE: cr4ck3d
+    logging:
+      options:
+        max-size: "2m"
+        max-file: "1"
+    networks:
+      vladimir_bridge:
+networks:
+    default:
+    vladimir_bridge:
+      driver: bridge
+    internal:
+      internal: true

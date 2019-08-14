@@ -1,0 +1,20 @@
+
+████████╗██████╗ ██╗███╗   ██╗██╗████████╗██╗   ██╗
+╚══██╔══╝██╔══██╗██║████╗  ██║██║╚══██╔══╝╚██╗ ██╔╝
+   ██║   ██████╔╝██║██╔██╗ ██║██║   ██║    ╚████╔╝ 
+   ██║   ██╔══██╗██║██║╚██╗██║██║   ██║     ╚██╔╝  
+   ██║   ██║  ██║██║██║ ╚████║██║   ██║      ██║   
+   ╚═╝   ╚═╝  ╚═╝╚═╝╚═╝  ╚═══╝╚═╝   ╚═╝      ╚═╝   
+                                                   
+
+Hello all. This is tr1n1ty (trinity) speaking about the release of brand new 
+underground tool called P.O.D (Ping of Death). This tool allows you to send
+a deadly ping to a target causing them to be 0wned instantly and crashed.
+
+Its at trinity.deadpackets.pw but you'll have to find the port yourself ;)
+
+Don't be a script kiddie. 
+
+Oh and FLAG{ZipAllTheThings}
+
+~Tr1n1ty

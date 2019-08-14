@@ -1,0 +1,31 @@
+<div class="jumbotron">
+	<h1 class="display-4">Welcome to CR4CK3D!</h1>
+	<p class="lead">Here at CR4CK3D, we post the best memes and hacking content (I mean, it will be that way once we
+		finish programming this site.)</p>
+	<hr class="my-4">
+	<p>Signing Up is disabled at the moment, but why don't you try searching for already posted blog posts?</p>
+	<form method="GET">
+		<div class="form-group">
+			<input type="text" class="form-control" name="searchTerm" id="searchTerm" placeholder="Search for posts...">
+		</div>
+		<button type="submit" class="btn btn-primary">Submit</button>
+	</form>
+	<br />
+	<br />
+	<div>
+		{{#each result}}
+			{{#with this}}
+			<div class="card" style="width: 25rem;">
+				<div class="card-body">
+					<h1 class="card-title">{{title}}</h2>
+					<hr />
+					<p class="card-text">{{body}}</p>
+				</div>
+			</div>
+			<br />
+			{{/with}}
+		{{else}}
+			<p class="empty">{{error}}</p>
+		{{/each}}
+	</div>
+</div>
